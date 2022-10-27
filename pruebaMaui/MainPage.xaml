@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pruebaMaui.MainPage">
+
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="logo_upt.svg"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Iniciar Sesión"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Entry x:Name="cla"
+                   Placeholder="Clave ISSEMYN"
+                   AutomationId="txtClave"
+                />
+
+            <Label
+                x:Name="lblAlertaCorreo"
+                AutomationId="lblAlertaCorreo"
+                />
+
+            <Entry x:Name="con"
+                   Placeholder="Contraseña"
+                />
+            <Button
+                x:Name="Siguiente"
+                Text="Iniciar"
+                VerticalOptions="End"
+                HorizontalOptions="Center" 
+                Command="{Binding RedireccionarLoginCommand}"
+                />
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
